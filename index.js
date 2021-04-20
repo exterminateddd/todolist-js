@@ -48,6 +48,7 @@ function genTaskElement(obj) {
 }
 
 function addTask(taskObj) {
+    if (doesTaskExist(taskObj.title)) { alert("A task with name '" + taskObj.title + "' already exists."); return }
     let oldList = JSON.parse(localStorage.getItem('tasks'));
     oldList.push(taskObj);
     localStorage.setItem('tasks', JSON.stringify(oldList));
@@ -118,4 +119,13 @@ function updateTasks(anim) {
 
 function getTasks() {
     return JSON.parse(localStorage.getItem("tasks")) || [];
+}
+
+function doesTaskExist(taskName) {
+    let rArray = JSON.parse(localStorage.getItem('tasks')).map((el) => {
+        if (el.title === taskName) {
+            return el
+        }
+    }).filter(el => el !== undefined)
+    return rArray.length > 0
 }
