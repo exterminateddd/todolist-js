@@ -30,7 +30,6 @@ textarea {
 }
 
 .listed {
-    transition: .4s linear!important;
     transform: translateX(200%);
 }
 
