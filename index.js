@@ -22,7 +22,6 @@ function el(htmlString) {
     var div = document.createElement('div');
     div.innerHTML = htmlString.trim();
 
-    // Change this to div.childNodes to support multiple top-level nodes
     return div.firstChild;
 }
 
@@ -49,7 +48,9 @@ function addTask(taskObj) {
     let oldList = JSON.parse(localStorage.getItem('tasks'));
     oldList.push(taskObj);
     localStorage.setItem('tasks', JSON.stringify(oldList));
-    updateTasks()
+    let newTask = el(genTaskElement(element));
+    document.querySelector(".task-list").appendChild(newTask);
+    setTimeout(() => { document.querySelector(".task-list").lastElementChild.style.transform = "translateX(0)" }, 1)
 }
 
 function markTask(taskName, this_) {
