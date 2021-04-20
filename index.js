@@ -6,6 +6,10 @@ const creationSubmitBtn = document.querySelector(".new-task-submit")
 
 creationFormDiv.style.display = "none"
 
+if (!localStorage.getItem('tasks')) {
+    localStorage.setItem('tasks', '[]')
+}
+
 creationFormToggleBtn.addEventListener('click', (e) => {
     if (creationFormDiv.style.display !== "none") {
         creationFormDiv.style.display = "none"
