@@ -1,0 +1,75 @@
+body {
+    padding: 24px;
+    margin: 0;
+    top: 0;
+    margin: 0;
+    line-break: break-line;
+    overflow-x: hidden;
+}
+
+* {
+    outline: none;
+}
+
+textarea {
+    resize: none;
+    height: 160px!important;
+}
+
+.new-task-submit {
+    background-color: blue;
+    color: white;
+    font-size: 22px;
+}
+
+.task {
+    border: 2px dashed;
+    border-color: darkblue;
+    padding: 12px;
+    margin-top: 8px;
+}
+
+.listed {
+    transition: .4s linear!important;
+    transform: translateX(200%);
+}
+
+.marked {
+    border: 2px solid rgb(17, 160, 17);
+}
+
+.task-mng {
+    border-style: solid;
+}
+
+.mng-btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+.huge-sign {
+    font-size: 36px;
+}
+
+.create-form {
+    border: 2px solid rgb(91, 223, 205);
+    transition: 0.4s;
+    display: flex;
+    flex-direction: column;
+}
+
+.create-form * {
+    height: 32px;
+    width: 360px;
+}
+
+.create-form *+* {
+    margin-top: 10px;
+}
+
+.task-list {
+    display: flex;
+    flex-direction: column-reverse;
+}

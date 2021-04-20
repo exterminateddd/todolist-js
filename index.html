@@ -1,0 +1,39 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TO-DO</title>
+    <script src="./Task.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="task task-mng">
+        <button class="mng-btn mng-new huge-sign">
+            +
+        </button>
+        <button class="mng-btn huge-sign">
+
+        </button>
+        <button class="mng-btn huge-sign">
+
+        </button>
+    </div>
+    <div class="create-form task">
+        <input type="text" class="new-task-name">
+        <textarea name="" id="" cols="30" rows="10" resizable="0" class="new-task-text"></textarea>
+        <button class="new-task-submit">Create</button>
+    </div>
+    <div class="task-list">
+    </div>
+    <script src="./index.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            updateTasks(true)
+        })
+    </script>
+</body>
+
+</html>
