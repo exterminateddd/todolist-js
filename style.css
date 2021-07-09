@@ -52,6 +52,10 @@ textarea {
     max-width: 100%;
 }
 
+.huge-sign {
+    font-size: 36px;
+}
+
 .create-form {
     border: 2px solid rgb(91, 223, 205);
     transition: 0.4s;
