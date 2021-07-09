@@ -27,7 +27,12 @@ clearTasksBtn.addEventListener('click', (e) => {
 })
 
 creationSubmitBtn.addEventListener('click', () => {
-    addTask(getTaskCreateObj())
+    let obj = getTaskCreateObj();
+    if (isTaskDataValid(obj)) {
+        addTask(getTaskCreateObj());
+    } else {
+        console.log("invalid!")
+    }
 })
 
 function el(htmlString) {
@@ -136,4 +141,8 @@ function doesTaskExist(taskName) {
         }
     }).filter(el => el !== undefined)
     return rArray.length > 0
+}
+
+function isTaskDataValid(data) {
+    return data.title.trim() && data.text.trim();
 }
