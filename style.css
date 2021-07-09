@@ -48,8 +48,8 @@ textarea {
     overflow: hidden;
 }
 
-.huge-sign {
-    font-size: 36px;
+.mng-btn * {
+    max-width: 100%;
 }
 
 .create-form {

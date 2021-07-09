@@ -1,6 +1,9 @@
 const newTaskName = document.querySelector(".new-task-name")
 const newTaskText = document.querySelector(".new-task-text")
+
 const creationFormToggleBtn = document.querySelector(".mng-new")
+const clearTasksBtn = document.querySelector(".mng-clear")
+
 const creationFormDiv = document.querySelector(".create-form")
 const creationSubmitBtn = document.querySelector(".new-task-submit")
 
@@ -16,6 +19,11 @@ creationFormToggleBtn.addEventListener('click', (e) => {
     } else {
         creationFormDiv.style.display = 'flex'
     }
+})
+
+clearTasksBtn.addEventListener('click', (e) => {
+    clearTasks();
+    updateTasks();
 })
 
 creationSubmitBtn.addEventListener('click', () => {
